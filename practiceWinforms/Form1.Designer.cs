@@ -141,14 +141,15 @@
             // 
             // textBox1
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.BackColor = SystemColors.Window;
+            textBox1.Dock = DockStyle.Fill;
             textBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             textBox1.Location = new Point(0, 0);
             textBox1.Margin = new Padding(0);
             textBox1.MinimumSize = new Size(0, 50);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(408, 233);
+            textBox1.Size = new Size(408, 60);
             textBox1.TabIndex = 11;
             textBox1.Text = "Сообщение";
             // 
@@ -196,15 +197,17 @@
             // 
             // panel4
             // 
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel4.AutoSize = true;
+            panel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel4.BackColor = Color.Transparent;
             panel4.Controls.Add(textBox1);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(30, 430);
-            panel4.Margin = new Padding(30, 0, 30, 0);
+            panel4.Location = new Point(30, 560);
+            panel4.Margin = new Padding(30, 30, 30, 80);
+            panel4.MaximumSize = new Size(0, 240);
             panel4.MinimumSize = new Size(0, 60);
             panel4.Name = "panel4";
-            panel4.Size = new Size(408, 251);
+            panel4.Size = new Size(408, 60);
             panel4.TabIndex = 33;
             // 
             // panel5
@@ -227,23 +230,25 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.AutoSize = true;
             panel2.Controls.Add(dataGridView1);
             panel2.Location = new Point(30, 0);
             panel2.Margin = new Padding(30, 0, 30, 0);
             panel2.MinimumSize = new Size(0, 100);
             panel2.Name = "panel2";
-            panel2.Size = new Size(408, 346);
+            panel2.Size = new Size(408, 427);
             panel2.TabIndex = 31;
             // 
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idMessage, message, lenght, sizeInByte });
             dataGridView1.GridColor = SystemColors.ActiveCaptionText;
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(0, 56);
             dataGridView1.MinimumSize = new Size(0, 100);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(408, 346);
@@ -271,9 +276,10 @@
             // 
             // labelCountMessages
             // 
+            labelCountMessages.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelCountMessages.AutoSize = true;
             labelCountMessages.Font = new Font("Segoe UI", 11.25F);
-            labelCountMessages.Location = new Point(0, 5);
+            labelCountMessages.Location = new Point(-2, 5);
             labelCountMessages.Margin = new Padding(5, 5, 5, 0);
             labelCountMessages.Name = "labelCountMessages";
             labelCountMessages.Size = new Size(138, 20);
@@ -282,9 +288,10 @@
             // 
             // countMessages
             // 
+            countMessages.Anchor = AnchorStyles.Left;
             countMessages.BackColor = SystemColors.ButtonHighlight;
             countMessages.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            countMessages.Location = new Point(144, 2);
+            countMessages.Location = new Point(137, 2);
             countMessages.Margin = new Padding(5, 5, 5, 0);
             countMessages.Name = "countMessages";
             countMessages.ReadOnly = true;
@@ -293,9 +300,10 @@
             // 
             // countBites
             // 
-            countBites.BackColor = SystemColors.ButtonHighlight;
+            countBites.Anchor = AnchorStyles.Right;
+            countBites.BackColor = SystemColors.Window;
             countBites.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            countBites.Location = new Point(305, 2);
+            countBites.Location = new Point(347, 2);
             countBites.Margin = new Padding(5);
             countBites.Name = "countBites";
             countBites.ReadOnly = true;
@@ -304,9 +312,10 @@
             // 
             // labelCountBites
             // 
+            labelCountBites.Anchor = AnchorStyles.Right;
             labelCountBites.AutoSize = true;
             labelCountBites.Font = new Font("Segoe UI", 11.25F);
-            labelCountBites.Location = new Point(210, 5);
+            labelCountBites.Location = new Point(255, 5);
             labelCountBites.Margin = new Padding(5, 5, 5, 0);
             labelCountBites.Name = "labelCountBites";
             labelCountBites.Size = new Size(89, 20);
@@ -315,37 +324,37 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.AutoSize = true;
             panel3.BackColor = Color.Transparent;
-            panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(labelCountBites);
             panel3.Controls.Add(labelCountMessages);
             panel3.Controls.Add(countBites);
             panel3.Controls.Add(countMessages);
-            panel3.Location = new Point(30, 346);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(30, 427);
             panel3.Margin = new Padding(30, 0, 30, 0);
             panel3.MinimumSize = new Size(0, 30);
             panel3.Name = "panel3";
-            panel3.Size = new Size(408, 84);
+            panel3.Size = new Size(408, 34);
             panel3.TabIndex = 34;
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(panel3, 0, 1);
             tableLayoutPanel1.Controls.Add(panel4, 0, 2);
             tableLayoutPanel1.Controls.Add(panel2, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel3, 0, 1);
-            tableLayoutPanel1.Location = new Point(0, 38);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.MinimumSize = new Size(0, 30);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80.46512F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 19.5348835F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 250F));
-            tableLayoutPanel1.Size = new Size(468, 681);
+            tableLayoutPanel1.Size = new Size(468, 781);
             tableLayoutPanel1.TabIndex = 35;
             // 
             // Form1
@@ -357,6 +366,7 @@
             Controls.Add(panel1);
             Controls.Add(panel5);
             Controls.Add(tableLayoutPanel1);
+            MinimumSize = new Size(470, 420);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);

@@ -16,5 +16,10 @@ namespace practiceWinforms
         {
             InitializeComponent();
         }
+
+        private void portValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

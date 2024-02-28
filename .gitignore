@@ -47,3 +47,13 @@ practiceWinforms/obj/Debug/net8.0-windows/practiceWinForm.AssemblyInfoInputs.cac
 practiceWinforms/obj/Debug/net8.0-windows/practiceWinForm.AssemblyInfo.cs
 .vs/ProjectEvaluation/practicewinforms.projects.v7.bin
 .vs/ProjectEvaluation/practicewinforms.metadata.v7.bin
+*.v2
+*.vsidx
+*.bin
+*.dll
+*.json
+*.exe
+*.pdb
+practiceWinforms/obj/Debug/net8.0-windows/practiceWinForm.csproj.BuildWithSkipAnalyzers
+*.cache
+*.txt
