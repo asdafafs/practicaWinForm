@@ -115,6 +115,7 @@
             sendMessage.TabIndex = 5;
             sendMessage.Text = "Отправить";
             sendMessage.UseVisualStyleBackColor = true;
+            sendMessage.Click += sendMessage_Click;
             // 
             // retry
             // 

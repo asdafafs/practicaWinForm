@@ -16,14 +16,13 @@ namespace practiceWinforms
                 dataGridView1.Rows.Add(item.Item1, item.Item2, item.Item3, item.Item4);
             }
 
-            // Обновление количества сообщений и суммы байтов
             UpdateMessageCount();
             UpdateByteCount();
         }
 
         private void UpdateMessageCount()
         {
-            var messageCount = dataGridView1.Rows.Count-1;
+            var messageCount = dataGridView1.Rows.Count - 1;
 
             countMessages.Text = messageCount.ToString();
         }
@@ -44,6 +43,11 @@ namespace practiceWinforms
             }
 
             countBites.Text = byteSum.ToString();
+        }
+
+        private void sendMessage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
