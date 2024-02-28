@@ -43,8 +43,8 @@
             textBox1 = new TextBox();
             labelCountMessages = new Label();
             portName = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            portValue = new TextBox();
+            ipValue = new TextBox();
             labelCountBites = new Label();
             countBites = new TextBox();
             countMessages = new TextBox();
@@ -202,23 +202,24 @@
             portName.TabIndex = 1;
             portName.Text = "port";
             // 
-            // textBox2
+            // portValue
             // 
-            textBox2.Anchor = AnchorStyles.Right;
-            textBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox2.Location = new Point(308, 6);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(59, 27);
-            textBox2.TabIndex = 28;
+            portValue.Anchor = AnchorStyles.Right;
+            portValue.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            portValue.Location = new Point(308, 6);
+            portValue.Name = "portValue";
+            portValue.Size = new Size(59, 27);
+            portValue.TabIndex = 28;
             // 
-            // textBox3
+            // ipValue
             // 
-            textBox3.Anchor = AnchorStyles.Left;
-            textBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox3.Location = new Point(39, 5);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(59, 27);
-            textBox3.TabIndex = 29;
+            ipValue.Anchor = AnchorStyles.Left;
+            ipValue.BackColor = SystemColors.ControlLightLight;
+            ipValue.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ipValue.Location = new Point(39, 5);
+            ipValue.Name = "ipValue";
+            ipValue.Size = new Size(59, 27);
+            ipValue.TabIndex = 29;
             // 
             // labelCountBites
             // 
@@ -234,6 +235,7 @@
             // countBites
             // 
             countBites.Anchor = AnchorStyles.Right;
+            countBites.BackColor = SystemColors.ButtonHighlight;
             countBites.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             countBites.Location = new Point(309, 10);
             countBites.Name = "countBites";
@@ -244,6 +246,7 @@
             // countMessages
             // 
             countMessages.Anchor = AnchorStyles.Left;
+            countMessages.BackColor = SystemColors.ButtonHighlight;
             countMessages.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             countMessages.Location = new Point(144, 10);
             countMessages.Name = "countMessages";
@@ -255,8 +258,8 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(portName);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(ipValue);
+            panel1.Controls.Add(portValue);
             panel1.Controls.Add(ipName);
             panel1.Location = new Point(48, 8);
             panel1.Name = "panel1";
@@ -265,7 +268,7 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(labelCountBites);
             panel3.Controls.Add(labelCountMessages);
@@ -354,8 +357,8 @@
         private TextBox textBox1;
         private Label labelCountMessages;
         private Label portName;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox portValue;
+        private TextBox ipValue;
         private Label labelCountBites;
         private TextBox countBites;
         private TextBox countMessages;
