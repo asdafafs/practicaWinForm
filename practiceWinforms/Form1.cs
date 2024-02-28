@@ -24,7 +24,7 @@ namespace practiceWinforms
         {
             var messageCount = dataGridView1.Rows.Count - 1;
 
-            countMessages.Text = messageCount.ToString();
+            //countMessages.Text = messageCount.ToString();
         }
 
         private void UpdateByteCount()
@@ -42,7 +42,7 @@ namespace practiceWinforms
                 }
             }
 
-            countBites.Text = byteSum.ToString();
+            //countBites.Text = byteSum.ToString();
         }
 
         private void sendMessage_Click(object sender, EventArgs e)
